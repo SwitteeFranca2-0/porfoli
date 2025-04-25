@@ -58,7 +58,7 @@ export default function Navbar() {
             ))}
            <Button variant="outline" className="border-cyan-500 text-cyan-400 hover:bg-cyan-950 hover:text-cyan-300" asChild>
             <a 
-              href="/franca _uvere_resume.pdf"
+              href="/franca_uvere_resume.pdf"
               download
               className="flex items-center justify-center gap-2"
             >
@@ -99,7 +99,7 @@ export default function Navbar() {
             asChild
           >
             <a 
-              href="/franca _uvere_resume.pdf"
+              href="/franca_uvere_resume.pdf"
               download
               className="flex items-center justify-center gap-2"
             >
