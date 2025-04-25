@@ -73,7 +73,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-sm text-gray-400">Email</p>
-                    <p className="text-white">contact@johndoe.dev</p>
+                    <p className="text-white">francauvere1@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -82,7 +82,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-sm text-gray-400">Phone</p>
-                    <p className="text-white">+1 (555) 123-4567</p>
+                    <p className="text-white">+234 902 094 9301</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -91,7 +91,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-sm text-gray-400">Location</p>
-                    <p className="text-white">San Francisco, CA</p>
+                    <p className="text-white">Lagos, Nigeria</p>
                   </div>
                 </div>
 
@@ -145,7 +145,7 @@ export default function Contact() {
                       <Input
                         id="name"
                         name="name"
-                        placeholder="John Doe"
+                        placeholder="Franca Uvere"
                         value={formData.name}
                         onChange={handleChange}
                         required
@@ -160,7 +160,7 @@ export default function Contact() {
                         id="email"
                         name="email"
                         type="email"
-                        placeholder="john@example.com"
+                        placeholder="francauvere1@gmail.com"
                         value={formData.email}
                         onChange={handleChange}
                         required

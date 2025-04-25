@@ -24,12 +24,13 @@ export default function Skills() {
   ]
 
   const backendSkills: Skill[] = [
-    { name: "Node.js", level: 85, color: "green" },
     { name: "Express", level: 80, color: "gray" },
-    { name: "NestJS", level: 75, color: "red" },
-    { name: "GraphQL", level: 70, color: "pink" },
+    { name: "Python", level: 75, color: "red" },
+    { name: "Node.js", level: 85, color: "green" },
+    { name: "Odoo", level: 70, color: "pink" },
     { name: "REST API", level: 90, color: "blue" },
     { name: "Microservices", level: 65, color: "purple" },
+    { name: "Shell/Bash Scripting", level: 80, color: "orange" },
   ]
 
   const databaseSkills: Skill[] = [
@@ -47,6 +48,7 @@ export default function Skills() {
     { name: "AWS", level: 70, color: "yellow" },
     { name: "CI/CD", level: 65, color: "green" },
     { name: "Testing", level: 80, color: "red" },
+    { name: "Automation (Selenium/Scrapy", level: 80, color: "red" },
     { name: "Agile", level: 85, color: "purple" },
   ]
 

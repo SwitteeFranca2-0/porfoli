@@ -6,11 +6,12 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { ExternalLink, Github, Maximize2 } from "lucide-react"
+import { ArrowRight, Github, Maximize2 } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 interface Project {
-  id: number
+  id: string
   title: string
   description: string
   image: string
@@ -18,6 +19,8 @@ interface Project {
   github: string
   demo: string
   category: "fullstack" | "backend" | "frontend"
+  type: "client" | "personal"
+  client?: string
 }
 
 export default function Projects() {
@@ -25,67 +28,101 @@ export default function Projects() {
 
   const projects: Project[] = [
     {
-      id: 1,
-      title: "E-Commerce Platform",
+      id: "1",
+      title: "Academic Connect",
       description:
-        "A full-featured e-commerce platform with product management, cart functionality, payment processing, and order tracking.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["Next.js", "TypeScript", "Node.js", "MongoDB", "Stripe"],
+      "A platform where researchers can collaborate on research projects, institutions can sign up, and organizations can participate.",
+      image: "/images/Acadmic-Connect-Feeds-Page.png",
+      tags: ["NextJS", "React", "Firestore", "Firebase auth", "TailwindCSS", "NodeJS"],
       github: "#",
       demo: "#",
       category: "fullstack",
+      type: "client",
+      client: "Oasis Premium",
     },
     {
-      id: 2,
+      id: "2",
+      title: "Online Banking Platform",
+      description:
+      "A secure online banking platform that offers account management, fund transfers, and transaction tracking.",
+      image: "/images/speedy-dashboard.png",
+      tags: ["Python", "Flask", "SQLite", "Redis", "HTML", "CSS", "JavaScript"],
+      github: "#",
+      demo: "#",
+      category: "backend",
+      type: "personal",
+    },
+    {
+      id: "3",
+      title: "E-Commerce Platform",
+      description:
+        "A full-featured e-commerce platform with product management, cart functionality, payment processing, and order tracking.",
+      image: "/images/bodijah_home.png",
+      tags: ["Wordpress", "WooCommerce", "PHP", "CSS"],
+      github: "#",
+      demo: "#",
+      category: "fullstack",
+      type: "client",
+      client: "BodijahMarket",
+    },
+    {
+      id: "4",
       title: "Task Management API",
       description:
         "A RESTful API for task management with authentication, authorization, and comprehensive CRUD operations.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/images/Academic-Connect-Feeds.png",
       tags: ["Node.js", "Express", "PostgreSQL", "JWT", "Docker"],
       github: "#",
       demo: "#",
       category: "backend",
+      type: "client",
     },
-    {
-      id: 3,
-      title: "Real-time Chat Application",
-      description: "A real-time chat application with private messaging, group chats, and file sharing capabilities.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["React", "Socket.io", "Node.js", "Redis", "MongoDB"],
-      github: "#",
-      demo: "#",
-      category: "fullstack",
-    },
-    {
-      id: 4,
-      title: "Content Management System",
-      description: "A headless CMS with a user-friendly admin panel, content modeling, and API access.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["Next.js", "GraphQL", "PostgreSQL", "TypeScript"],
-      github: "#",
-      demo: "#",
-      category: "fullstack",
-    },
-    {
-      id: 5,
-      title: "Authentication Microservice",
-      description: "A secure authentication microservice with OAuth, MFA, and user management features.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["Node.js", "Express", "JWT", "Redis", "MongoDB"],
-      github: "#",
-      demo: "#",
-      category: "backend",
-    },
-    {
-      id: 6,
-      title: "API Gateway",
-      description: "A robust API gateway with rate limiting, caching, and request routing capabilities.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["Node.js", "Express", "Redis", "Docker", "Kubernetes"],
-      github: "#",
-      demo: "#",
-      category: "backend",
-    },
+    // {
+    //   id: "5",
+    //   title: "Real-time Chat Application",
+    //   description: "A real-time chat application with private messaging, group chats, and file sharing capabilities.",
+    //   image: "/placeholder.svg?height=400&width=600",
+    //   tags: ["React", "Socket.io", "Node.js", "Redis", "MongoDB"],
+    //   github: "#",
+    //   demo: "#",
+    //   category: "fullstack",
+    //   type: "client",
+    //   client: "ConnectTech Inc.",
+    // },
+    // {
+    //   id: "6",
+    //   title: "Content Management System",
+    //   description: "A headless CMS with a user-friendly admin panel, content modeling, and API access.",
+    //   image: "/placeholder.svg?height=400&width=600",
+    //   tags: ["Next.js", "GraphQL", "PostgreSQL", "TypeScript"],
+    //   github: "#",
+    //   demo: "#",
+    //   category: "fullstack",
+    //   type: "personal",
+    // },
+    // {
+    //   id: "6",
+    //   title: "Authentication Microservice",
+    //   description: "A secure authentication microservice with OAuth, MFA, and user management features.",
+    //   image: "/placeholder.svg?height=400&width=600",
+    //   tags: ["Node.js", "Express", "JWT", "Redis", "MongoDB"],
+    //   github: "#",
+    //   demo: "#",
+    //   category: "backend",
+    //   type: "client",
+    //   client: "SecureTech Solutions",
+    // },
+    // {
+    //   id: "7",
+    //   title: "API Gateway",
+    //   description: "A robust API gateway with rate limiting, caching, and request routing capabilities.",
+    //   image: "/placeholder.svg?height=400&width=600",
+    //   tags: ["Node.js", "Express", "Redis", "Docker", "Kubernetes"],
+    //   github: "#",
+    //   demo: "#",
+    //   category: "backend",
+    //   type: "personal",
+    // },
   ]
 
   const filteredProjects = activeTab === "all" ? projects : projects.filter((project) => project.category === activeTab)
@@ -151,7 +188,7 @@ export default function Projects() {
                         className="object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
-                      <div className="absolute top-2 right-2">
+                      <div className="absolute top-2 right-2 flex gap-2">
                         <Badge
                           className={`${
                             project.category === "fullstack"
@@ -161,17 +198,31 @@ export default function Projects() {
                         >
                           {project.category}
                         </Badge>
+                        <Badge
+                          className={`${
+                            project.type === "client"
+                              ? "bg-green-900/70 text-green-300 hover:bg-green-800"
+                              : "bg-blue-900/70 text-blue-300 hover:bg-blue-800"
+                          }`}
+                        >
+                          {project.type}
+                        </Badge>
                       </div>
                     </div>
                     <CardContent className="p-6 flex-grow flex flex-col">
                       <h3 className="text-xl font-bold mb-2 text-white">{project.title}</h3>
                       <p className="text-gray-400 mb-4 flex-grow">{project.description}</p>
                       <div className="flex flex-wrap gap-2 mb-6">
-                        {project.tags.map((tag, i) => (
+                        {project.tags.slice(0, 3).map((tag, i) => (
                           <Badge key={i} variant="outline" className="bg-gray-800/50 text-gray-300 border-gray-600">
                             {tag}
                           </Badge>
                         ))}
+                        {project.tags.length > 3 && (
+                          <Badge variant="outline" className="bg-gray-800/50 text-gray-300 border-gray-600">
+                            +{project.tags.length - 3}
+                          </Badge>
+                        )}
                       </div>
                       <div className="flex gap-3 mt-auto">
                         <Button
@@ -190,10 +241,10 @@ export default function Projects() {
                           className="flex-1 gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700"
                           asChild
                         >
-                          <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                            <ExternalLink className="h-4 w-4" />
-                            Demo
-                          </a>
+                          <Link href={`/projects/${project.id}`}>
+                            <ArrowRight className="h-4 w-4" />
+                            Details
+                          </Link>
                         </Button>
                       </div>
                     </CardContent>
@@ -209,9 +260,12 @@ export default function Projects() {
             variant="outline"
             size="lg"
             className="gap-2 border-cyan-500 text-cyan-400 hover:bg-cyan-950 hover:text-cyan-300"
+            asChild
           >
-            View All Projects
-            <Maximize2 className="h-4 w-4" />
+            <Link href="/projects">
+              View All Projects
+              <Maximize2 className="h-4 w-4" />
+            </Link>
           </Button>
         </div>
       </div>

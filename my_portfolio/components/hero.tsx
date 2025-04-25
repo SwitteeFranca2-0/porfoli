@@ -3,8 +3,9 @@
 import { useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { ArrowDown, Terminal } from "lucide-react"
-import Navbar from "./navbar"
 import { TypeAnimation } from "react-type-animation"
+import Link from "next/link"
+import { Maximize2 } from "lucide-react"
 
 export default function Hero() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -109,7 +110,6 @@ export default function Hero() {
     <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full"></canvas>
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/80 to-black"></div>
-      <Navbar />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="flex items-center justify-center mb-6">
           <Terminal className="h-10 w-10 text-cyan-400 mr-2" />
@@ -117,7 +117,7 @@ export default function Hero() {
         </div>
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4">
           <span className="text-white">I&apos;m </span>
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">John Doe</span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">Franca Uvere</span>
         </h1>
         <div className="h-16 md:h-20">
           <TypeAnimation
@@ -145,18 +145,19 @@ export default function Hero() {
             size="lg"
             className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white"
           >
-            View Projects
+            <Link href="/#projects">
+              View Projects
+            </Link>
           </Button>
           <Button
             size="lg"
             variant="outline"
             className="border-cyan-500 text-cyan-400 hover:bg-cyan-950 hover:text-cyan-300"
           >
-            Contact Me
+             <Link href="/#contact">
+             Contact Me
+            </Link>
           </Button>
-        </div>
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ArrowDown className="h-6 w-6 text-cyan-400" />
         </div>
       </div>
     </section>

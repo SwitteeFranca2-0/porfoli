@@ -42,10 +42,10 @@ export default function About() {
               <div className="absolute bottom-0 left-0 right-0 p-6 z-30">
                 <div className="flex gap-3">
                   <span className="inline-block px-3 py-1 bg-cyan-900/70 text-cyan-300 rounded-full text-sm">
-                    TypeScript
+                    Python(Django/Flask/Odoo)
                   </span>
                   <span className="inline-block px-3 py-1 bg-blue-900/70 text-blue-300 rounded-full text-sm">
-                    React
+                    React JS
                   </span>
                   <span className="inline-block px-3 py-1 bg-green-900/70 text-green-300 rounded-full text-sm">
                     Node.js
@@ -64,7 +64,7 @@ export default function About() {
             <h3 className="text-2xl font-bold mb-6 text-white">Software Engineer & Problem Solver</h3>
             <p className="text-gray-300 mb-6">
               I&apos;m a passionate software engineer with expertise in both frontend and backend development. With over
-              5 years of experience, I specialize in building scalable, efficient, and user-friendly applications.
+              3 years of experience, I specialize in building scalable, efficient, and user-friendly applications.
             </p>
             <p className="text-gray-300 mb-8">
               My journey in tech began with a fascination for solving complex problems and has evolved into creating

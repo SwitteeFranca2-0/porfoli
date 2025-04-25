@@ -79,7 +79,7 @@ export default function Footer() {
         </div>
         <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
           <p className="flex items-center justify-center gap-1">
-            Made with <Heart className="h-4 w-4 text-red-500" /> by John Doe © {new Date().getFullYear()}
+            Made with <Heart className="h-4 w-4 text-red-500" /> by Franca Uvere © {new Date().getFullYear()}
           </p>
         </div>
       </div>
