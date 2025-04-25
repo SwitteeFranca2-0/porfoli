@@ -68,7 +68,7 @@ const projects: Project[] = [
       id: "4",
       title: "Task Management API",
       description:
-        "A RESTful API for task management with authentication, authorization, and comprehensive CRUD operations.",
+      "A robust API enabling users to manage tasks with advanced authentication, role-based access, and real-time updates. Supports seamless CRUD operations and integration with modern productivity tools.",
       image: "/images/Task-Project.png",
       tags: ["Next.js", "PostgreSQL"],
       github: "#",

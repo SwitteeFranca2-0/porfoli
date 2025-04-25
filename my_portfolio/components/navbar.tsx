@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Menu, X, Code } from "lucide-react"
+import { Menu, X, Code, Download } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
@@ -56,9 +56,15 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
-            <Button variant="outline" className="border-cyan-500 text-cyan-400 hover:bg-cyan-950 hover:text-cyan-300">
-              Resume
-            </Button>
+           <Button variant="outline" className="border-cyan-500 text-cyan-400 hover:bg-cyan-950 hover:text-cyan-300" asChild>
+          <a 
+            href="/franca _uvere_resume.pdf"
+            download
+            className="flex items-center justify-center gap-2"
+          >
+            Resume <Download className="h-4 w-4" />
+          </a>
+        </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -90,8 +96,16 @@ export default function Navbar() {
           <Button
             variant="outline"
             className="w-full mt-4 border-cyan-500 text-cyan-400 hover:bg-cyan-950 hover:text-cyan-300"
+            asChild
           >
-            Resume
+            <Link 
+              href="/images/bodijah_home.png"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2"
+            >
+              Resume <Download className="h-4 w-4" />
+            </Link>
           </Button>
         </div>
       </div>
