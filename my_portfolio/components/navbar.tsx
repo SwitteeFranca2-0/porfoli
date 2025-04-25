@@ -57,11 +57,11 @@ export default function Navbar() {
               </Link>
             ))}
            <Button variant="outline" className="border-cyan-500 text-cyan-400 hover:bg-cyan-950 hover:text-cyan-300" asChild>
-          <a 
-            href="/franca _uvere_resume.pdf"
-            download
-            className="flex items-center justify-center gap-2"
-          >
+            <a 
+              href="/franca _uvere_resume.pdf"
+              download
+              className="flex items-center justify-center gap-2"
+            >
             Resume <Download className="h-4 w-4" />
           </a>
         </Button>
@@ -98,14 +98,13 @@ export default function Navbar() {
             className="w-full mt-4 border-cyan-500 text-cyan-400 hover:bg-cyan-950 hover:text-cyan-300"
             asChild
           >
-            <Link 
-              href="/images/bodijah_home.png"
-              target="_blank"
-              rel="noopener noreferrer"
+            <a 
+              href="/franca _uvere_resume.pdf"
+              download
               className="flex items-center justify-center gap-2"
             >
               Resume <Download className="h-4 w-4" />
-            </Link>
+            </a>
           </Button>
         </div>
       </div>
