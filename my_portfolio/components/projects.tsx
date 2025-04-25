@@ -70,7 +70,7 @@ export default function Projects() {
       title: "Task Management API",
       description:
         "A RESTful API for task management with authentication, authorization, and comprehensive CRUD operations.",
-      image: "/images/Academic-Connect-Feeds.png",
+      image: "/images/Task-Project.png",
       tags: ["Node.js", "Express", "PostgreSQL", "JWT", "Docker"],
       github: "#",
       demo: "#",

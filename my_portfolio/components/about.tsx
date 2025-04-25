@@ -33,7 +33,7 @@ export default function About() {
               <div className="absolute inset-0 border-2 border-cyan-500/30 rounded-lg transform rotate-3 z-0"></div>
               <div className="absolute inset-0 bg-gradient-to-tr from-purple-900/20 to-cyan-900/20 rounded-lg z-10"></div>
               <Image
-                src="/placeholder.svg?height=500&width=400"
+                src="/images/Photo.jpg"
                 alt="Developer Portrait"
                 fill
                 className="object-cover rounded-lg z-0"

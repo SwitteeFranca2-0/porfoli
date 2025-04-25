@@ -50,43 +50,6 @@ const projects = [
     ],
     challenges: []
   },
-  // {
-  //   id: "2",
-  //   title: "Task Management API",
-  //   description:
-  //     "A RESTful API for task management with authentication, authorization, and comprehensive CRUD operations.",
-  //   longDescription:
-  //     "This robust task management API serves as the backbone for productivity applications, providing developers with a comprehensive set of endpoints to create, read, update, and delete tasks. The API is built with scalability in mind, capable of handling thousands of concurrent users without performance degradation.\n\nSecurity is a top priority, with JWT-based authentication ensuring that users can only access their own tasks. Role-based authorization further restricts certain operations to admin users, providing an additional layer of security.\n\nThe API is thoroughly documented using OpenAPI specifications, making it easy for developers to integrate with their frontend applications. Comprehensive error handling ensures that clients receive meaningful error messages when something goes wrong.",
-  //   images: [
-  //     "/placeholder.svg?height=600&width=800",
-  //     "/placeholder.svg?height=600&width=800",
-  //     "/placeholder.svg?height=600&width=800",
-  //   ],
-  //   tags: ["Node.js", "Express", "PostgreSQL", "JWT", "Docker", "Redis", "Swagger"],
-  //   github: "#",
-  //   demo: "#",
-  //   category: "backend",
-  //   type: "personal",
-  //   client: null,
-  //   duration: "2 months",
-  //   year: "2022",
-  //   role: "Backend Developer",
-  //   features: [
-  //     "User authentication with JWT",
-  //     "Role-based authorization",
-  //     "CRUD operations for tasks and task lists",
-  //     "Task assignment and delegation",
-  //     "Deadline tracking and notifications",
-  //     "Data validation and sanitization",
-  //     "Rate limiting and request throttling",
-  //   ],
-  //   challenges: [
-  //     "Designing a flexible database schema that accommodates various task types",
-  //     "Implementing efficient caching to improve response times",
-  //     "Ensuring data consistency across distributed systems",
-  //     "Building comprehensive test coverage for all endpoints",
-  //   ],
-  // },
   {
     id: "2",
     title: "Online Banking Platform",
@@ -156,6 +119,40 @@ const projects = [
       "Analytics and reporting",
     ],
     challenges: []
+  },
+  {
+    id: "4",
+    title: "Task Management API",
+    description:
+      "A RESTful API for task management with authentication, authorization, and comprehensive CRUD operations.",
+    longDescription:
+      "This robust task management API serves as the backbone for productivity applications, providing developers with a comprehensive set of endpoints to create, read, update, and delete tasks. The API is built with scalability in mind, capable of handling thousands of concurrent users without performance degradation.\n\nSecurity is a top priority, with JWT-based authentication ensuring that users can only access their own tasks. Role-based authorization further restricts certain operations to admin users, providing an additional layer of security.\n\nThe API is thoroughly documented using OpenAPI specifications, making it easy for developers to integrate with their frontend applications. Comprehensive error handling ensures that clients receive meaningful error messages when something goes wrong.",
+    images: [
+      "/images/Task-calender.png",
+      "/images/Task-Kanban.png",
+      "/images/task-tasks.png",
+      "/images/Task-dashboard.png",
+    ],
+    tags: ["Node.js", "Express", "PostgreSQL", "JWT", "Docker", "Redis", "Swagger"],
+    github: "#",
+    demo: "#",
+    category: "backend",
+    type: "personal",
+    client: null,
+    duration: "2 months",
+    year: "2022",
+    role: "Backend Developer",
+    features: [
+      "User authentication with JWT",
+      "Role-based authorization",
+      "CRUD operations for tasks and task lists",
+      "Task assignment and delegation",
+      "Deadline tracking and notifications",
+      "Data validation and sanitization",
+      "Rate limiting and request throttling",
+    ],
+    challenges: [
+        ],
   },
   // {
   //   id: "4",
@@ -454,7 +451,7 @@ export default function ProjectPage() {
                 </div>
               </div>
 
-              <div>
+              {/* <div>
                 <h3 className="text-xl font-semibold mb-4 text-white">Challenges & Solutions</h3>
                 <ul className="space-y-2">
                   {project.challenges.map((challenge, index) => (
@@ -464,7 +461,7 @@ export default function ProjectPage() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </div> */}
             </div>
           </motion.div>
 
