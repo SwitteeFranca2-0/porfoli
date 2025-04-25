@@ -64,7 +64,7 @@ export default function About() {
             <h3 className="text-2xl font-bold mb-6 text-white">Software Engineer & Problem Solver</h3>
             <p className="text-gray-300 mb-6">
               I&apos;m a passionate software engineer with expertise in both frontend and backend development. With over
-              3 years of experience, I specialize in building scalable, efficient, and user-friendly applications.
+              2 years of experience, I specialize in building scalable, efficient, and user-friendly applications.
             </p>
             <p className="text-gray-300 mb-8">
               My journey in tech began with a fascination for solving complex problems and has evolved into creating
